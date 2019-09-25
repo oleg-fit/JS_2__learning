@@ -44,9 +44,9 @@ const inputTask4Num2 = document.querySelector('.task4__input_num2');
 const btnTask4 = document.querySelector('.task4__btn');
 const out4 = document.querySelector('.out4');
 
-cleanInput = function() {
-    inputTask4Num1.value = '';
-    inputTask4Num2.value  = '';
+cleanInput = function(a , b) {
+    a.value = '';
+    b.value  = '';
 }
 
 btnTask4.onclick = () => {
@@ -63,18 +63,18 @@ btnTask4.onclick = () => {
         out4.innerHTML = num2;
     }
 
-    cleanInput();
+    cleanInput(inputTask4Num1, inputTask4Num2);
 }
 
 
 // Task 5.
 // Создайте на странице input, куда пользователь может вводить год рождения. Добавьте кнопку. При нажатии кнопки выполняйте функцию, которая если год рождения меньше 2000 выводит на страницу возраст пользователя (2019 - введенный год рождения), если год рождения больше или равен 2000 - выводит в консоль возраст пользователя.
 
-const inputTask5 = document.querySelector('task5__input');
+const inputTask5 = document.querySelector('.task5__input');
 const btnTask5 = document.querySelector('.task5__btn');
 const out5 = document.querySelector('.out5');
 
-out5.onclick = () => {
+btnTask5.onclick = () => {
     let yearOfBirthUser5 = +inputTask5.value;
     let yearNow5 = 2019;
     let comparativeYear = 2000;
@@ -83,9 +83,11 @@ out5.onclick = () => {
     if (yearOfBirthUser5 < comparativeYear) {
         out5.innerHTML = age5;
     }
-    else if (yearOfBirthUser5 > comparativeYear || yearOfBirthUser5 == comparativeYear) {
+    else if (yearOfBirthUser5 >= comparativeYear) {
         console.log(age5);
     }
+
+    cleanInput(inputTask5, 0);
 }
 
 
@@ -93,22 +95,86 @@ out5.onclick = () => {
 // Task 6.
 // Создайте input куда пользователь может ввести номер квартиры. Если квартира от 1 до 32 - то выводите сообщение, о том, что такая квартира есть,если другое число - сообщение о том, что квартира не существует.
 
+// не понимаю тут нужно было кнопку делать?
+const inputTask6 = document.querySelector('.task6__input');
+const btnTask6 = document.querySelector('.task6__btn');
+const out6 = document.querySelector('.out6');
+
+btnTask6.onclick = () => {
+    let apartmentNumber = +inputTask6.value;
+
+    if(apartmentNumber >= 1 && apartmentNumber <= 32) {
+        out6.innerHTML = 'Такая квартира есть!';
+    }
+    else {
+        out6.innerHTML = 'Такая квартиры нет!';
+    }
+
+    cleanInput(inputTask6, 0);
+}
 
 
 // Task 7.
 // Создайте input куда пользователь может ввести число. После нажатия кнопки - на страницу должно выводиться сообщение - большие или меньше нуля это число.
 
+const inputTask7 = document.querySelector('.task7__input');
+const btnTask7 = document.querySelector('.task7__btn');
+const out7 = document.querySelector('.out7');
+
+btnTask7.onclick = () => {
+    let number7 = +inputTask7.value;
+
+    if(number7 > 0) {
+        // Надеюсь я правильно понял задание и нужно использовать alert
+        alert('Значение боьше нуля');
+    }
+    else if (number7 < 0) {
+        alert('Значение меньше нуля');
+    }
+
+    cleanInput(inputTask7, 0);
+}
 
 
 // Task 8.
 // Создайте input куда пользователь может ввести число. После нажатия кнопки - на страницу должно выводиться сообщение - четное или нет это число. Определить четное или нет число в JS очень просто. Нужно получить целый остаток от деления (читать за оператор), для этого используется оператор % . И проверить. Если остаток от деления 0 - то число четное, если нет - не четное.
 
+const inputTask8 = document.querySelector('.task8__input');
+const btnTask8 = document.querySelector('.task8__btn');
+const out8 = document.querySelector('.out8');
+
+btnTask8.onclick = () => {
+    let number8 = +inputTask8.value;
+
+    if(number8 % 2 == 0) {
+        alert('Число четное');
+    }
+    else {
+        alert('Число не четное');
+    }
+
+    cleanInput(inputTask8, 0);
+}
 
 
 // Task 9.
 // Создайте 2 инпута. Если оба инпута заполнены (не равны пустой строке), то по нажатию кнопки число из первого инпута возведите в степень из второго input. Результат выведите на страницу. Как возвести в степень? Читаем!
 
+const inputTask9Num1 = document.querySelector('.task9__input_number1');
+const inputTask9Num2 = document.querySelector('.task9__input_number2');
+const btnTask9 = document.querySelector('.task9__btn');
+const out9 = document.querySelector('.out9');
 
+btnTask9.onclick = () => {
+    let num1 = +inputTask9Num1.value;
+    let num2 = +inputTask9Num2.value;
+
+    if(num1 != '' && num2 != '') {
+        out9.innerHTML = num1 ** num2;
+    }
+
+    cleanInput(inputTask9Num1, inputTask9Num2);
+}
 
 // Task 10.
 // Есть поле input куда пользователь может ввести свое имя. Нужно при нажатии кнопки - сказать с помощью alert('Hello имя_пользователя'), но хитрые пользователи часто нажимают несколько раз пробел. Вроде ничего и не ввел, но программа считывает пробелы и пытается работать. Напишите проверку, которая выводит предупреждение если пользователь ничего не ввел, или ввел один пробел. В остальных случаях - Hello...
