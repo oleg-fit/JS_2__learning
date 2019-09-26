@@ -91,7 +91,6 @@ btnTask5.onclick = () => {
 }
 
 
-
 // Task 6.
 // Создайте input куда пользователь может ввести номер квартиры. Если квартира от 1 до 32 - то выводите сообщение, о том, что такая квартира есть,если другое число - сообщение о том, что квартира не существует.
 
@@ -176,23 +175,82 @@ btnTask9.onclick = () => {
     cleanInput(inputTask9Num1, inputTask9Num2);
 }
 
+
 // Task 10.
 // Есть поле input куда пользователь может ввести свое имя. Нужно при нажатии кнопки - сказать с помощью alert('Hello имя_пользователя'), но хитрые пользователи часто нажимают несколько раз пробел. Вроде ничего и не ввел, но программа считывает пробелы и пытается работать. Напишите проверку, которая выводит предупреждение если пользователь ничего не ввел, или ввел один пробел. В остальных случаях - Hello...
 
+const inputTask10 = document.querySelector('.task10__input');
+const btnTask10 = document.querySelector('.task10__btn');
+const out10 = document.querySelector('.out10');
+
+btnTask10.onclick = function() {
+    let name10 =  inputTask10.value;
+
+    if(name10 == '' || name10 == ' ') {
+        alert('Введите корректно свое имя!!!')
+    }
+    else {
+        alert(`Hello ${name10}`)
+    }
+
+    cleanInput(inputTask10, 0);
+}
 
 
 // Task 11.
 // Хитрый пользователь научился обходить нашу предыдущую задачу, и начал вводить где 3, а где и 5 пробелов. Напишите программу, которая проверяет пробелы или нет введены в строку. Как защититься от пробелов? Обрезать их. Допустим вы получили значение из input в переменную a. Теперь напишите a = a.trim(); - это обрежет пробелы и результат запишет в переменную a. Теперь просто сравните переменную a c пустой строкой. Если она равна - выведите ошибку, если нет - сообщение с содержимым input.
 
+const inputTask11 = document.querySelector('.task11__input');
+const btnTask11 = document.querySelector('.task11__btn');
+const out11 = document.querySelector('.out11');
+
+btnTask11.onclick = function() {
+    let name11 =  inputTask11.value;
+    let nameWithoutSpaces11 = name11.trim();
+
+    if(nameWithoutSpaces11 == '') {
+        alert('Введите корректно свое имя!!!')
+    }
+    else {
+        alert(`Hello ${nameWithoutSpaces11}`)
+    }
+
+    cleanInput(inputTask11, 0);
+}
 
 
 // Task 12.
 // Пользователь может ввести число от 1 до 3. Если пользователь ввел 1 - то в консоль выведите слово "один" и т.д. Для решения используйте switch.
 
+const inputTask12 = document.querySelector('.task12__input');
+const btnTask12 = document.querySelector('.task12__btn');
+
+btnTask12.onclick = function() {
+    let name12 =  +inputTask12.value;
+
+    switch (name12) {
+        case 1:
+          console.log('Один');
+          break;
+        case 2:
+          console.log('Два');
+          break;
+        case 3:
+          console.log('Три');
+          break;
+    }
+    
+    cleanInput(inputTask12, 0);
+}
 
 
 // Task 13.
 // Пользователь может ввести номер дома. Если дом от 1 до 5 - то улица 1, если от 6 до 11 - улица 2, если от 11 до 20 - улица 3. Используя if, elseif - реализуйте программу, которая будет указывать улицу в зависимости от введенного дома.
+
+
+
+
+
 
 
 
