@@ -1,0 +1,61 @@
+.page {
+    background-color: #f2f6f8;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.page__title {
+    font-size: 35px;
+}
+
+.page__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.list-lessons__item {
+    width: 550px;
+    margin-top: 15px;
+    padding: 15px;
+
+    background-color: #c6e2ea;
+    border: 1px #000 solid;
+}
+
+.list-lessons__title {
+    font-size: 25px;
+}
+
+.list-lessons__subtitle {
+    font-size: 20px;
+}
+
+.list-lessons__text {
+    font-size: 18px;
+}
+
+.list-lessons__link {
+    display: block;
+    
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: #b82121;
+    border-radius: 10px;
+}
