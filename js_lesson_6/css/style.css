@@ -1,0 +1,44 @@
+.page {
+    background-color: #f2f6f8;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 500px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+
+    border: 2px solid #000000;
+    background-color: #fff;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.out5,
+.out6,
+.out7,
+.out8,
+.out9,
+.out10,
+.out11,
+.out12,
+.out13,
+.out14,
+.out15,
+.out16,
+.out17,
+.out18,
+.out19,
+.out20  {
+    font-family: monospace;
+}
