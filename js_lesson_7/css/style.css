@@ -1,0 +1,37 @@
+.page {
+    background-color: #f2f6f8;
+}
+
+.container {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.task__bottom,
+.task__top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    width: 600px;
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+
+    border: 2px solid #000000;
+    background-color: #fff;
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    font-size: 35px;
+}
+
+h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+}
