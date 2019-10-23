@@ -1,0 +1,14 @@
+h1 {
+    margin-bottom: 150px;
+}
+
+.page {
+    background-color: #f2f6f8;
+}
+
+.container { 
+    width: 1200px;
+    margin: 0 auto;
+
+    text-align: center;
+}
